@@ -72,7 +72,7 @@ Green.
 1. Complete the scenario `restrict to movies with `PG` or `R` ratings` in `filter_movie_list.feature`. You can use existing step definitions in `web_steps.rb` to check and uncheck the appropriate boxes, submit the form, and check whether the correct movies appear (and just as importantly, movies with unselected ratings do not appear). But to make the solution more declarative, consider tips A, B, and C below.
 
 A. Since it's tedious to repeat steps such as When I check the 'PG' checkbox, And I check the 'R' checkbox, etc., create a movie_steps.rb step definition to match a step such as:
-`Given I check the following ratings: G, PG, R` or `Given I uncheck the following ratings: PG-13, R`
+`When I check the following ratings: G, PG, R` or `When I uncheck the following ratings: PG-13, R`
 This single step definition should only check the specified boxes, and
 leave the other boxes as they were. HINT: this step definition can reuse
 existing steps in  `web_steps.rb` , as shown in the example in Section
