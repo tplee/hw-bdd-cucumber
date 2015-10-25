@@ -21,5 +21,5 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, ratings_list|
 end
 
 Then /I should see all the movies/ do
-  assert page.all('table#movies tboby tr').count.should == 10
+  page.all("table#movies tbody tr").count.should == 10
 end
